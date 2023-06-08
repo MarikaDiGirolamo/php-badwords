@@ -10,6 +10,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/style.css">
     <title>php-badwords</title>
+
+    <style>
+        body{background-color: #222; color: white;}
+        label{display: block;}
+        .button{margin-top: 1rem;} /*Aggiunto correggendo con Luca*/
+    </style>
 </head>
 
 <body>
@@ -21,12 +27,20 @@
         ?>
 
         <div class="container p-4 text-center">
-            <h1> Inserisci la parola che vuoi censurare</h1>
+            <h1> Inserisci la parola che vuoi censurare!</h1>
             <div class="form">
                 <form class="p-3" action="response.php" method="POST">
-                    <input type="text" name="text" placeholder="Write Something...">
-                    <input type="text" name="badWord" placeholder="Write your bad word...">
-                    <button type="submit">Submit</button>
+                    <label for="text">Inserisci il testo da verificare</label>
+                    <textarea name="text" id="" cols="30" rows="10"></textarea> <!--Stile rivisto durante la lezione-->
+                    <!-- <input type="text" name="text" placeholder="Write Something...">
+                    <input type="text" name="badWord" placeholder="Write your bad word..."> -->
+                    <label for="badWord">Inserisci la parola da censurare</label>
+                    <input type="text" name="badWord">
+                    <div class="button">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+
+                    </div>
                 </form>
             </div>
         </div>
